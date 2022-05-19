@@ -1,0 +1,13 @@
+title exercise 0.6
+
+note over browser:
+browser executes js-code
+that adds note to local copy of list
+and renders that list to display
+end note
+note over browser:
+browser starts executing js-code that
+adds note to list on server
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa\njson payload: {"content":"note content","date":"2022-05-19T16:46:29.263Z"}
+server-->browser: 201 created response\njson payload: {"message": "note created"}
